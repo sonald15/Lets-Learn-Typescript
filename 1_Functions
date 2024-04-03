@@ -1,31 +1,49 @@
-// functions in the typescript 
+// simple function
+function signupuser(name: string, email: string, ispaid: boolean) {}
 
-function addnumber(num: number)  // parameter need to give type of variable 
-{
-  return num + 2;
+signupuser("sonal", "sonaldhani7@gmail.com", false);
+//----------------------------------------------------------------------------------------------------------------
+
+// Declaring return type of function explicitly in simple function
+function addTwo(num: number): number {
+  return 2 + num;
 }
 
-function getUpperCase(val: string) {
-  return val.toUpperCase;
-}
+let value1 = addTwo(7);
+console.log(value1);
 
-function signUpUser(name: string, email: string, ispaid: boolean) {}
+//--------------------------------------------------------------------------------------------------------------------
+// Arrow Function
 
-let loginUser = (name: string, email: string, isPaid: boolean = false) => {};
-
-addnumber(8);
-getUpperCase("sonal");
-signUpUser("sonal", "sonaldhani7@gmail.com", true);
-loginUser("sona", "sona@hds.com");
+let loginUser = (name: string, email: string, ispaid: boolean = false) => {}; // we given default value to ispaid parameter
+loginUser("hima", "hima@jdf.com"); // its fine we didnt provide the value for paramter of ispaid .
+//-----------------------------------------------------------------------------------------------------------------
+// Declaring return type of function in arrow function explicityly
 
 const getHello = (s: string): string => {
-  return "";
+  return "hello " + s;
 };
+let hellosonal = getHello("sonal");
+console.log(hellosonal);
+//-----------------------------------------------------------------------------------------------------
 
-const heros = ["thor", "spiderman", "ironman"];
+// Arrow function 2nd type 
+const heros = ["thor", "spiderman", "katoraman"];
 
 heros.map((hero): string => {
   return `hero is ${hero}`;
 });
+//-----------------------------------------------------------------------------------------------------
 
-export {};
+function consoleError(errmsg :string ):void{
+  console.log(errmsg);
+}
+
+
+
+function handleError(errmsg: string):never{
+  throw new Error(errmsg);
+}
+
+
+
