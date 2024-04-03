@@ -1,0 +1,31 @@
+// functions in the typescript 
+
+function addnumber(num: number)  // parameter need to give type of variable 
+{
+  return num + 2;
+}
+
+function getUpperCase(val: string) {
+  return val.toUpperCase;
+}
+
+function signUpUser(name: string, email: string, ispaid: boolean) {}
+
+let loginUser = (name: string, email: string, isPaid: boolean = false) => {};
+
+addnumber(8);
+getUpperCase("sonal");
+signUpUser("sonal", "sonaldhani7@gmail.com", true);
+loginUser("sona", "sona@hds.com");
+
+const getHello = (s: string): string => {
+  return "";
+};
+
+const heros = ["thor", "spiderman", "ironman"];
+
+heros.map((hero): string => {
+  return `hero is ${hero}`;
+});
+
+export {};
