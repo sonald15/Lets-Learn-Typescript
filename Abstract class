@@ -1,0 +1,24 @@
+abstract class TakePhoto {
+  constructor(public filter: string, public cameraMode: string) {}
+
+  abstract getSepia(): void;
+  getReelTime(): number {
+    return 8;
+  }
+}
+
+class Instagram4 extends TakePhoto {
+  constructor(
+    public cameraMode: string,
+    public burst: number,
+    public filter: string
+  ) {
+    super(cameraMode, filter);
+  }
+
+  getSepia(): void {
+    console.log("Sepia");
+  }
+}
+
+const sd = new Instagram4("test", 4, "Test");
